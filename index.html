@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Fantin</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincule seu arquivo CSS aqui -->
+</head>
+<body>
+    <div class="container">
+        <button class="download-button download-button-animation" onclick="downloadFile()">Baixe a Planilha aqui!!</button>
+    </div>
+
+    <script>
+        // Função para fazer o download após 3 segundos
+        function downloadFile() {
+            setTimeout(function () {
+                var link = document.createElement('a');
+                link.href = 'downloads/tutorial.xlsx'; // Caminho correto para o arquivo na pasta "downloads"
+                link.target = '_blank'; // Abre o link em uma nova guia
+                link.download = 'tutorial.xlsx'; // Nome do arquivo para salvar
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Redireciona o usuário para a página de "Obrigado"
+                window.location.href = 'obrigado.html';
+            }, 500); // 3 segundos (3000 milissegundos)
+        }
+    </script>
+</body>
+</html>
