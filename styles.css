@@ -1,0 +1,193 @@
+/* Reset de estilos padrão do navegador */
+body, h1, h2, h3, p, ul, li, form, label, input, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definições gerais */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-image: url('placeholder-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 161, 134, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none; /* Remove a imagem de fundo */
+        background-color: #fff; /* Define uma cor de fundo alternativa para telas menores */
+    }
+    .container {
+        max-width: 70%;
+    }
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.form {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px; /* Reduz a altura do padding do formulário */
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    margin: 10px 0; /* Reduz a margem superior e inferior do formulário */
+}
+
+/* Rótulos e campos de entrada */
+label {
+    font-size: 14px; /* Tamanho menor da fonte para as etiquetas */
+    color: #555; /* Cor mais suave para as etiquetas */
+    margin-bottom: 6px; /* Espaçamento menor abaixo das etiquetas */
+    display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 6px; /* Redução na altura do padding dos campos de entrada */
+    margin-bottom: 12px; /* Espaçamento menor abaixo dos campos de entrada */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px; /* Tamanho menor da fonte para os campos de entrada */
+}
+
+/* Botão de Compra (vermelho) */
+.buy-button {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+    width: auto;
+    margin-left: 20px;
+}
+
+.buy-button:hover {
+    background-color: #cc0000;
+}
+
+/* Botão de Download (verde) */
+/* Botão de Download (verde) */
+.download-button {
+    background-color: #16a186; /* Cor verde para o botão de Download */
+    color: #fff;
+    padding: 20px 10px; /* Aumenta o padding para aumentar o tamanho do botão */
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+}
+
+.download-button-animation {
+    animation: pulse 2s infinite; /* Adiciona uma animação chamada "pulse" infinita */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Botão de Download (verde) */
+.download-button {
+    background-color: #16a186; /* Cor verde para o botão de Download */
+    color: #fff;
+    padding: 20px 10px; /* Aumenta o padding para aumentar o tamanho do botão */
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+    animation: pulse 2s infinite, shadow-pulse 2s infinite; /* Adiciona animações "pulse" e "shadow-pulse" */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra */
+    }
+    100% {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.download-button:hover {
+    background-color: #14b077; /* Cor verde mais escura em hover */
+    transform: scale(1.1); /* Aumenta o tamanho do botão em hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra em hover */
+}
